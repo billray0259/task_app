@@ -1,10 +1,8 @@
-Problem Description
-
-Blue signifies something that could be implemented in an app to serve a purpose
+## Problem Description
 
 Assume people seek happiness
 
-Goal: Ensure useful tasks are completed while maximizing happiness
+### Goal: Ensure useful tasks are completed while maximizing happiness
 
 -   A task is useful if
 
@@ -104,7 +102,7 @@ Meta-feedback
 
     -   Allow users to answer on a spectrum form -1 to 1 to adjust the weights more continuously
 
-App functionality
+### App functionality
 
 -   Users can create profiles
 
@@ -190,7 +188,7 @@ App functionality
             -   Long time period = 1 month
             -   Long time period view shows how many points each user got every day over the last month
 
-Database Tables / Django Models
+### Database Tables / Django Models
 
 User
 
@@ -261,7 +259,7 @@ UserToPreference
 
     -   Preference score
 
-Pages
+### Pages
 
 Create profile
 
@@ -343,8 +341,3 @@ View point histories
 -   Long time selector
 -   Short time selector
 -   Bar graph of all active users
-
-Issues
-
--   Clicking on a task does not make it editable
--   Deleting a task does not ask for confirmation
