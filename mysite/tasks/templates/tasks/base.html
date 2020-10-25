@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+{%block script%}{% endblock %}
+
+<body>
+    <div id="header">
+        <h1>
+            {% block header %}
+                header
+            {% endblock %}
+        </h1>
+    </div>
+    <div id="top_button">
+        {% block top_button %}
+            <button>top_button</button>
+        {% endblock %}
+    </div>
+    <div>
+        {% block content %}
+            content
+        {% endblock %}
+    </div>
+</body>

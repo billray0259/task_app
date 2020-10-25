@@ -1,0 +1,40 @@
+{% extends "tasks/base.html" %}
+
+{% block title %}
+Tasks
+{% endblock %}
+
+{% block script %}
+<script>
+    function toggleNewTaskForm() {
+        var x = document.getElementById("newTaskForm");
+        x.hidden = !x.hidden
+    }
+</script>
+{% endblock %}
+
+{% block top_button %}
+<button onclick="toggleNewTaskForm()">New Task</button>
+{% endblock %}
+
+{% block header %}
+Tasks
+{% endblock %}
+
+{% block content %}
+<div id="newTaskForm" hidden>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<ul>
+{% for task in tasks %}
+    <li>
+        {{task.name}} {{task.period}}
+        <a href="delete/{{task.id}}">X</a>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

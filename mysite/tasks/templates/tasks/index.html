@@ -1,0 +1,29 @@
+{% extends 'tasks/base.html' %}
+
+{% block title %}
+Task App
+{% endblock %}
+
+{% block top_button %}
+
+{% endblock %}
+
+{% block header %}
+Users
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    Hello {{user.first_name}},
+{% else %}
+    <a href="login/"> Login </a>
+{% endif %}
+<br>
+{% for user_ in users %}
+    {{user_.username}}: {{user_.points}}
+    <br>
+{% endfor %}
+{% if user.is_authenticated %}
+<a href="logout/"> Logout </a>
+{% endif %}
+{% endblock %}
