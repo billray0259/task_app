@@ -102,7 +102,7 @@ Meta-feedback
 
     -   Allow users to answer on a spectrum form -1 to 1 to adjust the weights more continuously
 
-### App functionality
+## App functionality
 
 -   Users can create profiles
 
@@ -188,7 +188,7 @@ Meta-feedback
             -   Long time period = 1 month
             -   Long time period view shows how many points each user got every day over the last month
 
-### Database Tables / Django Models
+## Database Tables / Django Models
 
 User
 
@@ -259,7 +259,7 @@ UserToPreference
 
     -   Preference score
 
-### Pages
+## Pages
 
 Create profile
 
