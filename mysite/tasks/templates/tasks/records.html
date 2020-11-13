@@ -1,0 +1,28 @@
+{% extends 'tasks/base.html' %}
+
+{% block title %}
+Task App
+{% endblock %}
+
+{% block top_button %}
+
+{% endblock %}
+
+{% block header %}
+    Task Records
+{% endblock %}
+
+{% block content %}
+    To Do
+    <ul>
+    {% for record in todo %}
+        <li>{{record.task.title}} {{record.points}} <button>Mark as complete</button></li>
+    {% endfor %}
+    </ul>
+    Done
+    <ul>
+    {% for record in done %}
+        <li>{{record.task.title}} {{record.points}}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

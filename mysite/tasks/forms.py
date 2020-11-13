@@ -15,9 +15,11 @@ class SignUpForm(ModelForm):
             raise ValidationError("That username is taken")
         return username
 
+
 class LoginForm(Form):
     username = forms.CharField(max_length=150)
     password = forms.CharField(widget=forms.PasswordInput())
+
 
 class TaskForm(ModelForm):
     class Meta:
